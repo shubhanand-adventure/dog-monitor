@@ -31,6 +31,23 @@ IGNORE_LINES = {
     START_MARKER,
 }
 
+# Embedded widgets that aren't the dog list. reCAPTCHA (inside the GoFundMe
+# donation widget) contains a random token that changes on every page load,
+# which caused a false alert on every run.
+SKIP_FRAME_KEYWORDS = (
+    "recaptcha", "google.com", "gstatic", "gofundme", "doubleclick",
+    "facebook", "youtube", "vimeo", "instagram", "tiktok", "stripe",
+)
+
+# Real dog listing lines are short. Anything longer is code/tokens, not a dog.
+MAX_LINE_LENGTH = 300
+
+
+def is_ignored_frame(frame):
+    url = (frame.url or "").lower()
+    return any(k in url for k in SKIP_FRAME_KEYWORDS)
+
+
 # "true" = email on any change (including dogs being adopted/removed).
 # "false" = only email when something new appears.
 NOTIFY_ON_REMOVALS = os.getenv("NOTIFY_ON_REMOVALS", "false").lower() == "true"
@@ -66,6 +83,8 @@ def fetch_listing():
 
         # If the dogs live in an embedded iframe, read those too.
         for frame in page.frames[1:]:
+            if is_ignored_frame(frame):
+                continue
             try:
                 section += "\n" + frame.inner_text("body")
             except Exception:
@@ -75,6 +94,8 @@ def fetch_listing():
         # so a new link almost always means a new dog profile.
         links = set()
         for frame in page.frames:
+            if frame is not page.main_frame and is_ignored_frame(frame):
+                continue
             try:
                 hrefs = frame.eval_on_selector_all(
                     "a[href]", "els => els.map(e => e.href)"
@@ -88,8 +109,17 @@ def fetch_listing():
     lines = []
     for raw in section.splitlines():
         line = " ".join(raw.split())
-        if line and line not in IGNORE_LINES and line not in lines:
-            lines.append(line)
+        if (
+            not line
+            or line in IGNORE_LINES
+            or line in lines
+            or len(line) > MAX_LINE_LENGTH
+            or "recaptcha" in line.lower()
+        ):
+            continue
+        lines.append(line)
+
+    links = {l for l in links if not any(k in l.lower() for k in ("recaptcha", "gstatic"))}
     return lines, sorted(links)
 
 

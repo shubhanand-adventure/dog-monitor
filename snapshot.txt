@@ -1,4 +1,4 @@
-Checked 2026-10-20 19:00 UTC
+Checked 2026-10-20 20:04 UTC
 
 ⭐️ Dog Of The Month! ⭐️
 Babe
@@ -15,23 +15,23 @@ Bongus
 Surfer
 Mr. Meatloaf
 3 YEARS
-Rusty
-9 YEARS
-Johnny
-Letty
-Maisie
+Mochi
 6 YEARS
+Teyla
+10 MONTHS
+Mimi
+Maisie
 Vivi
 Zayne
+9 YEARS
 Cody
 11 YEARS
 Allie
 Sky
-Mochi
-Teyla
-10 MONTHS
-Jewel
+Brownie
 2 YEARS
+Romeo
+Jewel
 Blondie
 13 YEARS
 Taz
@@ -41,20 +41,19 @@ Buzz
 Fran
 Valerie
 8 YEARS
-Brownie
-Romeo
+Yoda
+3 MONTHS
+Dolly
+5 MONTHS
 Memo
 Coconut
 Maggie
 Zuessey
 Maple
 Kyle
-Arabelle
-4 MONTHS
-Yoda
-3 MONTHS
-Dolly
-5 MONTHS
+Balto
+Star
+Gavin
 Loki
 Gretchen
 Rollie Pollie
@@ -62,6 +61,6 @@ Honeycomb
 Gecko
 Enrique
 4 YEARS
-Balto
-Star
-Gavin
+Rusty
+Johnny
+Letty

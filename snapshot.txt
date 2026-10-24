@@ -1,4 +1,4 @@
-Checked 2026-10-24 19:01 UTC
+Checked 2026-10-24 19:30 UTC
 
 ⭐️ Dog Of The Month! ⭐️
 Babe
@@ -13,22 +13,21 @@ Kelsey
 5 YEARS
 Shaggy
 Surfer
-Arabelle
-4 MONTHS
-Brownie
-2 YEARS
-Johnny
+Valerie
+8 YEARS
+Mochi
+6 YEARS
+Romeo
 Selene
 3 YEARS
 Maisie
-6 YEARS
 Vivi
 Zayne
 9 YEARS
 Honeycomb
 Allie
-Valerie
-8 YEARS
+Arabelle
+4 MONTHS
 Raven
 Patrick
 5 MONTHS
@@ -37,6 +36,7 @@ Blondie
 13 YEARS
 Taz
 Poncho
+2 YEARS
 Bongus
 Fran
 Balto
@@ -51,7 +51,7 @@ Cody
 Enrique
 4 YEARS
 Rusty
-Romeo
+Johnny
 Genie
 Loki
 Gretchen
@@ -59,7 +59,7 @@ Rollie Pollie
 Zuessey
 Maple
 Kyle
-Mochi
+Brownie
 Teyla
 10 MONTHS
 Teddy
